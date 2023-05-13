@@ -1,0 +1,85 @@
+
+.select2-selection__rendered {
+    line-height: 42px !important;
+}
+.select2-container .select2-selection--single {
+    height: 38px !important;
+}
+.select2-selection__arrow {
+    height: 38px !important;
+}
+.input-group > .select2-container {
+    width: 30% !important;;
+    flex: 1 1 auto;
+}
+.input-group > .select2-container .select2-selection--single {
+    line-height: inherit;
+    height: 38px !important;
+}
+img.center {
+    display: block;
+    margin: 0 auto;
+}
+.hidden {
+    display: none!important
+}
+
+.bbb {
+	position: absolute;
+    top: 0px;
+    left: 0px;
+    background: #1ABC9C;
+    padding: 2px 6px;
+    color: #fff;
+    font-size: 12px;
+    border-bottom-right-radius: 6px 6px;
+}
+/* Rounded tabs */
+
+.rounded-nav {
+    border-radius: 50rem !important;
+}
+.rounded-nav .nav-link {
+    border-radius: 50rem !important;
+}
+#myTab {
+    justify-content: center;
+}
+.gamelist_title{
+    font-size: 10px;
+}
+
+.selfcenter{
+    align-self: center;
+}
+
+.konfirmasi{
+    position: relative;
+    top: -60px;
+}
+.invoices{
+    background-color: #0F997F;
+    height: 100%;
+}
+.blokinvoice{
+    min-height: 700px;
+}
+.headstatus i{
+    font-size: 60px;
+    color: #fff;
+}
+.cjdw{
+    font-size: 30px;
+    color: #fff;
+}
+.umami{
+    border: dashed 1px #92A7C2;
+    padding: 12px;
+}
+#load{
+    width:100%;
+    height:100%;
+    position:fixed;
+    z-index:99999;
+    background:url("https://app.ezpaygaming.com/public/assets/images/applogo.png") no-repeat center center rgba(255,255,255,9.0)
+}

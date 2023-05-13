@@ -1,0 +1,137 @@
+body{
+    background-repeat: no-repeat;
+    background: #78F7C4;
+    background: -webkit-gradient(linear, left top, left bottom, from(#78F7C4), to(#3DACBF));
+    background: -moz-linear-gradient(top, #78F7C4, #3DACBF);
+    filter: progid: DXImageTransform.Microsoft.gradient(startColorstr='#78F7C4', endColorstr='#3DACBF');
+}
+.user_card {
+    height: 400px;
+    width: 350px;
+    margin-top: auto;
+    margin-bottom: auto;
+    background: #fff;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding: 10px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    -moz-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    border-radius: 20px;
+
+}
+.register_card {
+    min-height: 550px;
+    width: 350px;
+    margin-top: auto;
+    margin-bottom: auto;
+    background: #fff;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding: 10px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    -moz-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    border-radius: 20px;
+
+}
+.brand_logo_container {
+    position: absolute;
+    height: 170px;
+    width: 170px;
+    top: -75px;
+    border-radius: 50%;
+    background: #fff;
+    padding: 10px;
+    text-align: center;
+}
+.brand_logo {
+    height: 150px;
+    width: 150px;
+    border-radius: 50%;
+    border: 2px solid #0FD4AB;
+}
+.form_container {
+    margin-top: 100px;
+}
+.login_btn {
+    width: 100%;
+    background: #01BA76 !important;
+    color: white !important;
+}
+.login_btn:focus {
+    box-shadow: none !important;
+    outline: 0px !important;
+}
+.login_container {
+    padding: 0 2rem;
+}
+
+.input-group-text {
+    width: 42px;
+    background: #00B572 !important;
+    color: white !important;
+    border: 0 !important;
+    border-radius: 0px !important;
+}
+.input_user,
+.input_pass:focus {
+    box-shadow: none !important;
+    outline: 0px !important;
+}
+.input_user,
+.input_pass  {
+    border-radius: 0px !important;
+}
+.custom-checkbox .custom-control-input:checked~.custom-control-label::before {
+    background-color: #c0392b !important;
+}
+.errorbox {
+    width: inherit;
+}
+
+.otp {
+    -webkit-transition: none;
+    transition: none;
+    width: 32px;
+    height: 32px;
+    text-align: center
+  }
+  
+  .otp:focus {
+    background-color: #63D3D4;
+    border-color: #63D3D4;
+    outline: 0;
+  }
+  
+  .otp.form-control-solid {
+    background-color: #7AEEB1;
+    border:solid 1px #00B572;
+    transition: color 0.15s ease, background-color 0.15s ease, border-color 0.15s ease, box-shadow 0.15s ease;
+  }
+  
+  .otp.form-control-solid:active,
+  .otp.form-control-solid.active,
+  .otp.form-control-solid:focus,
+  .otp.form-control-solid.focus {
+    background-color: #63D3D4;
+    border-color: #00B572;
+    color: #3F4254;
+    transition: color 0.15s ease, background-color 0.15s ease, border-color 0.15s ease, box-shadow 0.15s ease;
+  }
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}

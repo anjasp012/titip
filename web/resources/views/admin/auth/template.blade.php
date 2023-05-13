@@ -1,0 +1,1 @@
+@include('admin.auth.template.'.website_config('template')->number.'')

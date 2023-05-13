@@ -1,0 +1,1 @@
+@include('admin.layouts.navigation.'.website_config('template')->number.'')

@@ -1,0 +1,129 @@
+<?php
+
+namespace App\Http\Controllers\Admin\Product;
+
+use App\Models\Product;
+use App\Models\CustomPrice;
+use Illuminate\Support\Arr;
+use Illuminate\Support\Str;
+use Illuminate\Http\Request;
+use App\Models\ProductCategory;
+use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Validator;
+use Illuminate\Foundation\Http\FormRequest;
+use App\DataTables\Admin\Product\CategoryDataTable;
+use App\Models\ProductSubCategory;
+use Illuminate\Http\Exceptions\HttpResponseException;
+
+class CategoryController extends Controller {
+    public function list(CategoryDataTable $dataTable) {
+        $components['breadcrumb'] = (object) [
+			'first' => 'Daftar Kategori',
+			'second' => 'Produk'
+		];
+        $components['statuses'] = ['1' => 'Aktif', '0' => 'Nonaktif'];
+        return $dataTable->render('admin.product.category.list', $components);
+    }
+    public function getForm(ProductCategory $target, Request $request) {
+		if ($request->ajax() == false) abort('404');
+        if ($target == true) $components['target'] = $target;
+        return view('admin.product.category.form', $components);
+    }
+    public function postForm(ProductCategory $target, PostRequest $request) {
+        if ($request->ajax() == false) abort('404');
+        if (Auth::guard('admin')->user()->level == 'Admin') {
+			return response()->json([
+				'status'  => false, 
+				'type'    => 'alert',
+                'message' => 'Aksi tidak diperbolehkan.'
+			]);
+        }
+		$input_data = [
+            'name' => escape_input($request->name),
+			'slug' => escape_input(Str::slug($request->name)),
+			'icon' => escape_input($request->icon),
+		];
+		if ($target->id <> null) {
+			$check_data = ProductCategory::where([['name', $input_data['name']]])->first();
+			if ($input_data['name'] <> $target['name'] AND $check_data) {
+				$validator = Validator::make($request->all(), [
+					'name' => 'required|unique:categories,name|max:20',
+				], [], ['name' => 'Nama']);
+				if ($validator->fails()) {
+                    return response()->json([
+						'status'  => false, 
+						'type'    => 'validation',
+						'message' => $validator->errors()->toArray()
+					]);
+				}
+			}
+			$update_data = $target->update($input_data);
+			return response()->json([
+				'status'  => true, 
+				'message' => 'Kategori berhasil diperbarui.'
+			]);
+		} else {
+			$insert_data = ProductCategory::create($input_data);
+			return response()->json([
+				'status'  => true, 
+				'message' => 'Kategori berhasil ditambahkan.'
+			]);
+		}
+	}
+	public function status(ProductCategory $target, $status, Request $request) {
+        if ($request->ajax() == false) abort('404');
+        if (Auth::guard('admin')->user()->level == 'Admin') return (json_encode(['result' => false], JSON_PRETTY_PRINT));
+        if (Arr::exists(['0', '1'], $status) == false) return (json_encode(['result' => false], JSON_PRETTY_PRINT));
+        $update_data = $target->update(['status' => $status]);
+        if ($update_data == true) {
+            return (json_encode([
+                'result'  => true,
+                'message' => 'Status Kategori <b>'.$target->full_name.'</b> berhasil diperbarui.'
+            ], JSON_PRETTY_PRINT));
+        } else {
+            return (json_encode(['result' => false], JSON_PRETTY_PRINT));
+        }
+	}
+	public function delete(ProductCategory $target, Request $request) {
+		if ($request->ajax() == false) abort('404');
+        if (Auth::guard('admin')->user()->level == 'Admin') return (json_encode(['result' => false], JSON_PRETTY_PRINT));
+		if ($target->delete()) {
+            $product = Product::where('category_id', $target->id)->delete();
+            $product = ProductSubCategory::where('category_id', $target->id)->delete();
+			return json_encode(['result' => true], JSON_PRETTY_PRINT);
+		}
+	}
+}
+
+class PostRequest extends FormRequest {
+    protected function getValidatorInstance() {
+		$instance = parent::getValidatorInstance();
+        if ($instance->fails() == true) {
+			throw new HttpResponseException(response()->json([
+				'status'  => false, 
+				'type'    => 'validation',
+				'message' => parent::getValidatorInstance()->errors()
+			]));
+		}
+        return parent::getValidatorInstance();
+    }
+    public function rules(Request $request) {
+		if (request()->segment(5) == null) {
+			return [
+				'name' => 'required|unique:product_categories,name',
+				'icon' => 'required|unique:product_categories,icon',
+			];
+		}
+		return [
+            'name' => 'required',
+            'icon' => 'required',
+		];
+    }
+    public function attributes() {
+		return [
+            'name' => 'Nama',
+            'icon' => 'Ikon',
+		];
+    }
+}

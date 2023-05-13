@@ -1,0 +1,78 @@
+
+.top-dashboard, .headpage {
+    background-image: url("../images/texture.jpg") !important;
+    background-repeat: no-repeat !important;
+    background-size: cover !important;
+    color: #F2F1F7;
+    
+}
+.headkonfirmasi {
+    background-image: url("../images/texture.jpg") !important;
+    background-repeat: no-repeat !important;
+    background-size: cover !important;
+    
+}
+
+.headpage{
+    font-size: 14px;
+    font-weight: bold;
+}
+.headpage a{
+    font-size: 20px;
+    color: #fff;
+}
+.logoapp {
+    width: 30px;
+}
+.topicon{
+    align-self: center;
+}
+.topnavicon {
+    font-size:20px;
+    margin-left: 10px;
+    color: #fff;
+}
+.blockrun{
+    display: flex;
+    background-color: rgba(128, 172, 154, 0.8);
+    border-radius: 4px;
+}
+.blockrun .bi{
+    width: 30px;
+    font-size: 16px;
+}
+
+.greens {
+  color: #00caa2;
+}
+.yellows {
+    color: #ff9413;
+}
+.ungu {
+    color: #4530ed;
+}
+.rp {
+    top: 25px;
+    position: absolute;
+}
+.saldosaya {
+    font-weight: bold;
+    font-size: 18px;
+    margin-left: 20px;
+}
+.walletinfo {
+    margin-top: -40px;
+    position: absolute;
+}
+.walletinfo .card{
+
+}
+.walletinfo .bi{
+    font-size: 26px;
+}
+.f-12 {
+    font-size: 11px;
+}
+.text-muteds{
+    color: darkgray;
+}

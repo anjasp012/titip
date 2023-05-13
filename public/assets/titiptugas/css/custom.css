@@ -1,0 +1,181 @@
+.c-badge {
+    background-color: #35b69f;
+    color: white;
+    height: 20px;
+    font-size: 11px;
+    width: 92px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2px;
+    margin-left: 10px;
+}
+
+.comment-text {
+    font-size: 16px
+}
+
+.wish {
+    color: #35b69f
+}
+
+.user-feed {
+    font-size: 14px;
+    margin-top: 12px
+}
+
+.rowquest {
+    font-size: 16px;
+    border-bottom: solid 3px #e2ebfc;
+}
+
+.timefeed {
+    font-size: 14px;
+}
+
+.avatar img {
+    border-radius: 50%;
+    position: relative;
+    left: -15px;
+    margin-left: -15px;
+    z-index: 1;
+    border: solid 2px #fff;
+}
+
+.avatars {
+    direction: rtl;
+    /* This is to get the stack with left on top */
+    text-align: left;
+    /* Now need to explitly align left */
+    padding-left: 25px;
+    /* Same value as the negative margin */
+}
+
+.eyeview {
+    margin-right: 15px;
+    font-size: 20px;
+    margin-top: 5px;
+}
+
+.close {
+    border: none;
+    background-color: #fff;
+}
+
+.postmodal .modal-header {
+    border-bottom: none;
+}
+
+.postmodal h5 {
+    font-weight: 800;
+}
+
+.postmodal textarea {
+    border-radius: 20px;
+    background-color: aliceblue;
+    border: none;
+}
+
+.postmodal select {
+    border-radius: 20px;
+    background-color: aliceblue;
+    border: none;
+}
+
+.textlink {
+    color: black;
+}
+
+.textlink:hover {
+    color: black;
+    text-decoration: underline;
+}
+
+.post_name {
+    font-size: 14px;
+    font-weight: 800;
+}
+
+.post_date {
+    font-size: 12px;
+}
+
+.post_btn {
+    font-weight: 700;
+}
+
+.post_btn span {
+    color: #758695;
+}
+
+.head_jawab {
+    color: #000;
+    font-size: 18px;
+    font-weight: 800;
+    line-height: 18px;
+    padding: 0px;
+    margin: 0px;
+}
+
+.profiles {
+    color: #000;
+}
+
+.profiles h4 {
+    font-size: 18px;
+    font-weight: 600;
+
+}
+
+.itemmapel {
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.profilecrown i {
+    font-size: 19px;
+    color: #C98600;
+}
+
+.profilecrown {
+    color: #000;
+    font-size: 16px;
+}
+
+.btnterbaik {
+    font-size: 12px;
+}
+
+.note-editor {
+    background-color: aliceblue;
+    border-radius: 10px;
+    border: none;
+}
+
+.btniconattacth {
+    margin-top: 10px;
+    padding: 0px 3px;
+}
+
+.iattc {
+    font-size: 18px;
+}
+
+.uploadFile {
+    visibility: hidden;
+}
+
+.flexfile {
+    border: solid 1px #ddd;
+    border-radius: 5px;
+}
+.boxtext{
+    overflow: hidden;
+}
+.txt-navi{
+    color: #012970;
+}
+.fsmall{
+    font-size: 12px;
+}

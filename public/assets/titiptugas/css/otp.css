@@ -1,0 +1,17 @@
+.userInput {
+    display: flex;
+    justify-content: center;
+}
+
+input {
+    margin: 10px;
+    height: 35px;
+    width: 40px;
+    border: none;
+    border-radius: 5px;
+    text-align: center;
+    font-family: arimo;
+    font-size: 1.2rem;
+    background: #eef2f3;
+
+}

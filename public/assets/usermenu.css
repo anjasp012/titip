@@ -1,0 +1,211 @@
+.appBottomMenu {
+  position: relative;
+  z-index: 0;
+  padding-bottom: 0;
+}
+.appBottomMenu .badge {
+  min-width: 16px;
+  height: 16px;
+  line-height: 9px !important;
+  font-size: 10px;
+  padding: 0 4px !important;
+  position: absolute;
+  right: 50%;
+  transform: translateX(120%);
+  top: -3px;
+}
+
+.appBottomMenu .badge-empty {
+  transform: translateX(200%);
+  top: -1px;
+}
+.appBottomMenu.shadowed {
+    border-top: none;
+    box-shadow: 0 -10px 20px -5px rgba(115, 115, 115, 0.15);
+}
+
+.appBottomMenu .item .action-button {
+    width: 48px;
+    height: 48px;
+    position: relative;
+    top: -9px;
+    border: 4px #fff solid;
+}
+
+.appBottomMenu .item strong.action {
+    position: relative;
+    top: -11px;
+}
+
+.appBottomMenu.relative {
+    position: relative;
+    z-index: 1;
+    border-radius: 0.9rem;
+}
+.appBottomMenu .item.active .action-button ion-icon {
+    color: #fff !important;
+}
+
+.appBottomMenu {
+  min-height: 56px;
+  position: fixed;
+  z-index: 999;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: #FFFFFF;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-top: 1px solid #E1E1E1;
+  padding-left: 4px;
+  padding-right: 4px;
+  padding-bottom: env(safe-area-inset-bottom);
+}
+
+.appBottomMenu.no-border {
+  border: 0 !important;
+  box-shadow: 0 !important;
+}
+
+.appBottomMenu.rounded {
+  border-radius: 24px 24px 0 0 !important;
+}
+
+.appBottomMenu.rounded .item:before {
+  display: none;
+}
+
+.appBottomMenu .item {
+  font-size: 9px;
+  letter-spacing: 0;
+  text-align: center;
+  width: 100%;
+  height: 56px;
+  line-height: 1.2em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.appBottomMenu .item:before {
+  content: '';
+  display: block;
+  height: 2px;
+  border-radius: 0 0 10px 10px;
+  background: transparent;
+  position: absolute;
+  left: 4px;
+  right: 4px;
+  top: 0;
+}
+
+.appBottomMenu .item .col {
+  width: 100%;
+  padding: 0 4px;
+  text-align: center;
+}
+
+.appBottomMenu .item i.icon,
+.appBottomMenu .item i.bi,
+.appBottomMenu .item ion-icon {
+  display: inline-flex;
+  margin: 1px auto 3px auto;
+  font-size: 26px;
+  line-height: 1em;
+  color: #141515;
+  transition: 0.1s all;
+  display: block;
+  margin-top: 1px;
+  margin-bottom: 3px;
+}
+
+.appBottomMenu .item .action-button {
+  display: inline-flex;
+  width: 50px;
+  height: 50px;
+  margin-left: -5px;
+  margin-right: -5px;
+  align-items: center;
+  justify-content: center;
+  border-radius: 200px;
+  background: #00caa2;
+}
+
+.appBottomMenu .item .action-button.large {
+  width: 60px;
+  height: 60px;
+  margin-top: -20px;
+  margin-left: -10px;
+  margin-right: -10px;
+}
+
+.appBottomMenu .item .action-button i.bi,
+.appBottomMenu .item .action-button ion-icon {
+  color: #FFF !important;
+  margin: 0 !important;
+  line-height: 0 !important;
+}
+
+.appBottomMenu .item strong {
+  margin-top: 4px;
+  display: block;
+  color: #141515;
+  font-weight: 400;
+  transition: 0.1s all;
+}
+
+.appBottomMenu .item:active {
+  opacity: .8;
+}
+
+.appBottomMenu .item.active:before {
+  background: transparent;
+}
+
+.appBottomMenu .item.active i.bi,
+.appBottomMenu .item.active i,
+.appBottomMenu .item.active strong {
+  color: var(--color-theme) !important;
+  font-weight: 500;
+}
+
+.appBottomMenu .item:hover i.icon,
+.appBottomMenu .item:hover ion-icon,
+.appBottomMenu .item:hover strong {
+  color: #141515;
+}
+
+.appBottomMenu.text-light {
+  color: #FFF;
+}
+
+.appBottomMenu.text-light .item {
+  color: #FFF;
+  opacity: .7;
+}
+
+.appBottomMenu.text-light .item i.icon,
+.appBottomMenu.text-light .item ion-icon,
+.appBottomMenu.text-light .item strong {
+  color: #FFF;
+}
+
+.appBottomMenu.text-light .item.active {
+  opacity: 1;
+}
+
+.appBottomMenu.text-light .item.active i.icon,
+.appBottomMenu.text-light .item.active ion-icon,
+.appBottomMenu.text-light .item.active strong {
+  color: #FFF !important;
+}
+
+.appBottomMenu.bg-primary, .appBottomMenu.bg-secondary, .appBottomMenu.bg-success, .appBottomMenu.bg-warning, .appBottomMenu.bg-danger, .appBottomMenu.bg-info, .appBottomMenu.bg-light, .appBottomMenu.bg-dark {
+  border: 0;
+}
+
+.appBottomMenu.bg-primary .item:before, .appBottomMenu.bg-secondary .item:before, .appBottomMenu.bg-success .item:before, .appBottomMenu.bg-warning .item:before, .appBottomMenu.bg-danger .item:before, .appBottomMenu.bg-info .item:before, .appBottomMenu.bg-light .item:before, .appBottomMenu.bg-dark .item:before {
+  display: none;
+}
